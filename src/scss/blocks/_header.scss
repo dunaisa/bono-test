@@ -1,0 +1,99 @@
+.header {
+  color: #0A2756;
+  background: #FFFFFF;
+  padding: 16px 50px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-left: 1px solid #C4C4C4;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 29px;
+    line-height: 34.6px;
+    font-weight: 300;
+    margin: 0;
+    padding: 5px 0;
+    width: 180px;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 24px;
+    }
+  }
+
+  &__nav {
+    padding: 0 24px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  &__list-link {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 19.09px;
+    font-weight: 300;
+  }
+
+  &__btn {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 19.09px;
+    font-weight: 300;
+    color: #007DFE;
+    padding: 8px 30px;
+    margin: 10px;
+    outline: none;
+    border: 1px solid #007DFE;
+    background: transparent;
+
+    @media screen and (max-width: 1024px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 13px;
+  }
+
+  &__icon-link {
+    text-decoration: none;
+  }
+
+  &__icon-img {
+    height: 26px;
+    width: 26px;
+  }
+}

@@ -1,0 +1,23 @@
+.page {
+  margin: 0 auto;
+  // background-color: #0A2756;
+  max-width: 1240px;
+  min-width: 320px;
+  // padding: 0 50px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #FFFFFF;
+  // color: #0A2756;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 1440px) {
+    // padding: 0 80px;
+
+  }
+}
