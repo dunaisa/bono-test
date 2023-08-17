@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 99px 0 160px;
+  margin: 0;
+  background-color: #0A2756;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 112px;
+  }
+
+  &__link {
+    color: #FFFFFF;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+
+    line-height: 19.09px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+
+    &_type__mail {
+      padding-bottom: 10px;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    &_type__tel {
+      padding-bottom: 30px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    &_type__info {
+      font-size: 14px;
+    }
+  }
+}
