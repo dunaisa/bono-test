@@ -1,0 +1,36 @@
+.speaker {
+  width: 378.02px;
+  height: 376px;
+  position: relative;
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 128, 255, 70%);
+    padding: 25px 30px 0;
+  }
+
+  &__info {
+    padding: 0 0 20px;
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    top: 50%;
+
+    &_type_name {
+      font-size: 20px;
+    }
+
+    &_type_position {
+      font-size: 16px;
+    }
+  }
+}

@@ -25,12 +25,15 @@ const { config } = require('../webpack.config.js');
 
 const babel = require('gulp-babel');
 
+const replace = require('gulp-replace');
+
 gulp.task('html:docs', function () {
   return gulp.src('./src/*.html')
     .pipe(htmlInclude({
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(replace('../images/', './images/'))
     .pipe(gulp.dest('./docs/'))
 })
 
@@ -83,16 +86,16 @@ gulp.task('clean:docs', function (done) {
   done()
 })
 
+// gulp.task('replaceUrl:docs', function () {
+//   return gulp.src('./src/*.html')
+
+// })
+
 gulp.task('watch:docs', function () {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('scss:docs'))
   gulp.watch('./src/**/*.html', gulp.parallel('html:docs'))
   gulp.watch('./src/images/**/*', gulp.parallel('images:docs'))
+  // gulp.watch('./src/**/*.html', gulp.parallel('replaceUrl:docs'))
   gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:docs'))
   gulp.watch('./src/js/**/*', gulp.parallel('js:docs'))
-})
-
-
-// gulp.task('ghPages', function () {
-//   return gulp.src('./docs/**/*')
-//     .pipe(ghPages())
-// });
+});

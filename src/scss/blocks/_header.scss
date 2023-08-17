@@ -6,6 +6,11 @@
   align-items: center;
   gap: 24px;
 
+  @media screen and (max-width: 425px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   &__container {
     display: flex;
     align-items: center;
