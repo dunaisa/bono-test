@@ -1,0 +1,94 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+  padding-top: clamp(4.688rem, 3.233rem + 7.27vw, 8.688rem);
+  padding-bottom: 100px;
+  padding-right: clamp(1.25rem, -3.295rem + 22.73vw, 13.75rem);
+  padding-left: clamp(1.25rem, -3.295rem + 22.73vw, 13.75rem);
+  background-color: #0A2756;
+
+  // @media screen and (max-width: 1023px) {
+  //   padding: 140px 220px 100px;
+  // }
+
+  &__heading {
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 60px;
+    line-height: 50px;
+    font-weight: 300;
+
+    @media screen and (max-width: 768px) {
+      font-size: 45px;
+    }
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+
+  @media screen and (max-width: 425px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__input {
+    padding: 12px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border: 1px solid #FFFFFF;
+
+    &_type_error {
+      border: 1px solid red;
+    }
+
+    @media screen and (max-width: 425px) {
+      grid-column: 1;
+    }
+  }
+
+  &__textarea {
+    grid-column: span 2;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #FFFFFF;
+
+    &_type_error {
+      border: 1px solid red;
+    }
+
+    @media screen and (max-width: 425px) {
+      grid-column: 1;
+    }
+  }
+
+  &__btn {
+    grid-column: 2;
+    width: 241px;
+    height: 70.9px;
+    justify-self: end;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #007DFE;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 19.6px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    @media screen and (max-width: 425px) {
+      justify-self: center;
+      grid-column: 1;
+      margin-top: 138px;
+    }
+  }
+}

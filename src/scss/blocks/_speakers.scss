@@ -1,10 +1,8 @@
 .speakers {
-  // display: flex;
-  // flex-direction: column;
-  // padding: 72px 120px 80px;
   padding: 72px 220px 130px;
-  // justify-content: center;
-  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 
   @media screen and (max-width: 1180px) {
     padding: 30px 180px 42px;
@@ -13,10 +11,6 @@
   @media screen and (max-width: 1100px) {
     padding: 30px 150px 92px;
   }
-
-  // @media screen and (max-width: 1040px) {
-  //   padding: 30px 120px 42px;
-  // }
 
   @media screen and (max-width: 425px) {
     padding: 10px 20px 90px;
@@ -28,33 +22,12 @@
     line-height: 34.6px;
     font-weight: 300;
     margin: 0;
-    padding: 0 0 0 94px;
+    padding: 0 0 0 10px;
     color: #0A2756;
-    // align-self: start;
   }
 
   &__slides-wrapper {
-    // margin-top: 49px;
-    // display: inline-flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // width: 990px;
-    // height: 438px;
     position: relative;
-
-    // @media screen and (max-width: 1240px) {
-    //   width: 900px;
-    // }
-
-    @media screen and (max-width: 768px) {
-      // width: 650px;
-      // height: 400px;
-    }
-
-    @media screen and (max-width: 425px) {
-      // height: 320px;
-    }
-
   }
 
   &__button {
@@ -80,10 +53,6 @@
       top: 50%;
       transform: translateY(-80%);
 
-      // @media screen and (max-width: 1240px) {
-      //   left: 45px;
-      // }
-
       @media screen and (max-width: 767px) {
         display: none;
       }
@@ -101,17 +70,11 @@
       top: 50%;
       transform: translateY(-80%);
 
-      // @media screen and (max-width: 1240px) {
-      //   right: 45px;
-      // }
-
       @media screen and (max-width: 767px) {
         display: none;
       }
     }
   }
-
-  // &__pagination-wrapper {}
 
   &__pagination {
     position: absolute;
@@ -126,29 +89,17 @@
 
 }
 
-// .swiper-pagination-bullet {
-//   padding: 5px 10px;
-//   display: block;
-//   width: 10px !important;
-//   height: 10px !important;
-//   margin: 0 30px 0;
-//   text-align: center;
-//   line-height: 30px;
-//   font-size: 12px;
-//   background-color: #E4E4E4 !important;
-//   opacity: 1 !important;
-//   background: rgba(0, 0, 0, 0.2);
-
-// }
-
-// .swiper-pagination-bullet-active {
-//   background-color: #0A2756 !important;
-//   width: 10px !important;
-//   height: 10px !important;
-// }
-
 .swiper-slide {
   display: flex !important;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #E4E4E4 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0A2756 !important;
 }

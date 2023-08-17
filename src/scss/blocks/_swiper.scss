@@ -1,23 +1,7 @@
 .spekers-swiper {
   overflow: hidden;
-
-  @media screen and (max-width: 1240px) {
-    // max-width: 671px;
-  }
-
-  @media screen and (max-width: 768px) {
-    // width: 320px;
-  }
 }
 
 .swiper-wrapper {
   display: inline-flex;
 }
-
-// .swiper-slide {
-//   @media screen and (max-width: 768px) {
-//     // margin-right: 5px !important;
-//     width: 100% !important;
-//   }
-
-// }
