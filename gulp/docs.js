@@ -6,6 +6,8 @@ const htmlInclude = require('gulp-file-include');
 // Подключение всех стилей scss происходит через sass
 const scss = require('gulp-sass')(require('sass'));
 
+const autoprefixer = require('gulp-autoprefixer');
+
 // Подключение live server
 const liveServer = require('gulp-server-livereload');
 
@@ -43,6 +45,7 @@ gulp.task('scss:docs', function () {
     .pipe(sourceMaps.init())
     .pipe(scss())
     .pipe(replace('../../images/', '../images/'))
+    .pipe(autoprefixer())
     .pipe(sourceMaps.write())
     .pipe(gulp.dest('./docs/css/'))
 })
