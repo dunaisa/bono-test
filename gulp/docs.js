@@ -42,6 +42,7 @@ gulp.task('scss:docs', function () {
     .src('./src/scss/*.scss')
     .pipe(sourceMaps.init())
     .pipe(scss())
+    .pipe(replace('../../images/', '../images/'))
     .pipe(sourceMaps.write())
     .pipe(gulp.dest('./docs/css/'))
 })
