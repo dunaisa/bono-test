@@ -63,7 +63,7 @@ gulp.task('js:docs', function () {
   return gulp
     .src('./src/js/*.js')
     .pipe(babel({
-      presets: ['@babel/env']
+      presets: ['@babel/env'],
     }))
     .pipe(webpack(config))
     .pipe(gulp.dest('./docs/js/'))

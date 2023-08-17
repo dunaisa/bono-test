@@ -5,23 +5,24 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 // init Swiper:
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.spekers-swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 2,
-  spaceBetween: 41,
+  slidesPerView: 1,
+  spaceBetween: 21,
   pagination: {
     el: ".speakers__pagination",
   },
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 21,
-    },
-    769: {
+    946: {
       slidesPerView: 2,
-      // spaceBetween: 31,
+      spaceBetween: 31,
+    },
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 41,
     },
   },
   navigation: {
