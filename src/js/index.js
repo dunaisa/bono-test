@@ -18,8 +18,11 @@ const swiper = new Swiper('.spekers-swiper', {
     el: ".speakers__pagination",
   },
   breakpoints: {
-    946: {
+    768: {
       slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    946: {
       spaceBetween: 31,
     },
 

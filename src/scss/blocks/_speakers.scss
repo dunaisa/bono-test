@@ -12,6 +12,10 @@
     padding: 30px 150px 92px;
   }
 
+  @media screen and (max-width: 768px) {
+    padding: 30px 70px 92px;
+  }
+
   @media screen and (max-width: 425px) {
     padding: 10px 20px 90px;
   }
@@ -58,7 +62,7 @@
       top: 50%;
       transform: translateY(-80%);
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         display: none;
       }
     }
@@ -75,7 +79,7 @@
       top: 50%;
       transform: translateY(-80%);
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 768px) {
         display: none;
       }
     }
@@ -103,6 +107,8 @@
 .swiper-pagination-bullet {
   background-color: #E4E4E4 !important;
   opacity: 1 !important;
+  width: 13px !important;
+  height: 13px !important;
 }
 
 .swiper-pagination-bullet-active {
