@@ -41,10 +41,10 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    border: 1px solid #FFFFFF;
+    border: 3px solid #FFFFFF;
 
     &_type_error {
-      border: 1px solid red;
+      border: 3px solid #FB5555;
     }
 
     @media screen and (max-width: 425px) {
@@ -57,10 +57,10 @@
     padding: 14px 20px;
     box-sizing: border-box;
     outline: none;
-    border: 1px solid #FFFFFF;
+    border: 3px solid #FFFFFF;
 
     &_type_error {
-      border: 1px solid red;
+      border: 3px solid #FB5555;
     }
 
     @media screen and (max-width: 425px) {

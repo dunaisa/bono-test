@@ -108,10 +108,11 @@
 </section>
     <div class="form-field">
   <h3 class="form-field__heading">Отправить сообщение</h3>
-  <form action="post" class="form">
-    <input type="text" class="form__input" placeholder="Ваше имя">
-    <input type="email" class="form__input" placeholder="Email">
-    <textarea name="" id="" cols="30" rows="10" class="form__textarea" placeholder="Ваше сообщение"></textarea>
+  <form method="post" class="form" novalidate>
+    <input type="text" class="form__input" placeholder="Ваше имя" name="name" id="text">
+    <input type="email" class="form__input" placeholder="Email" name="email" id="email">
+    <textarea name="" cols="30" rows="10" class="form__textarea" placeholder="Ваше сообщение" name="textarea"
+      id="textarea"></textarea>
     <button class="form__btn" type="submit">отправить</button>
   </form>
 </div>
