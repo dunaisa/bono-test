@@ -42,6 +42,8 @@
     outline: none;
     border: none;
     border: 3px solid #FFFFFF;
+    box-shadow: inset 20px 20px 0px 20px #FFFFFF;
+    appearance: none;
 
     &_type_error {
       border: 3px solid #FB5555;
