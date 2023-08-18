@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 397px;
   column-gap: 64px;
   position: relative;
+  overflow: hidden;
 
   @media screen and (max-width: 1024px) {
     column-gap: 34px;
@@ -65,36 +66,122 @@
     top: 180px;
     left: -10px;
 
+    -webkit-animation: textTransform 3s linear 2s backwards;
+    -moz-animation: textTransform 3s linear 2s backwards;
+    -ms-animation: textTransform 3s linear 2s backwards;
+    animation: textTransform 3s linear 2s backwards;
+
+    @keyframes textTransform {
+      0% {
+        top: -70px;
+      }
+
+      50% {
+        top: 110;
+      }
+
+      100% {
+        top: 180px;
+      }
+    }
+
     @media screen and (max-width: 1024px) {
       font-size: 24px;
       top: 125px;
       left: 0;
+
+      @keyframes textTransform {
+        0% {
+          top: -70px;
+        }
+
+        50% {
+          top: 55px;
+        }
+
+        100% {
+          top: 125px;
+        }
+      }
     }
 
     @media screen and (max-width: 768px) {
       font-size: 28px;
       top: 165px;
       left: -25px;
+
+      @keyframes textTransform {
+        0% {
+          top: -70px;
+        }
+
+        50% {
+          top: 95px;
+        }
+
+        100% {
+          top: 165px;
+        }
+      }
     }
 
     @media screen and (max-width: 425px) {
       font-size: 18px;
       top: 100px;
-      left: -30px;
+      left: -35px;
+
+      @keyframes textTransform {
+        0% {
+          top: -70px;
+        }
+
+        50% {
+          top: 30px;
+        }
+
+        100% {
+          top: 100px;
+        }
+      }
     }
   }
 
   &__data {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 68px;
+    font-size: 48px;
     font-weight: 200;
     margin: 0;
     padding: 0;
     grid-column: 1;
     grid-row: 1;
 
+    -webkit-animation: blurFadeIn 1s ease-in 5s backwards;
+    -moz-animation: blurFadeIn 1s ease-in 5s backwards;
+    -ms-animation: blurFadeIn 1s ease-in 5s backwards;
+    animation: blurFadeIn 1s ease-in 5s backwards;
+
+    @keyframes blurFadeIn {
+      0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        transform: scale(1.2);
+      }
+
+      50% {
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px #fff;
+        transform: scale(1.1);
+      }
+
+      100% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        transform: scale(1);
+      }
+    }
+
     @media screen and (max-width: 1024px) {
-      font-size: 38px;
+      font-size: 32px;
     }
 
     @media screen and (max-width: 425px) {
@@ -112,11 +199,64 @@
     font-size: 102px;
     line-height: 90px;
     font-weight: 400;
-    margin: 23px 0 0;
+    margin: 0;
     padding: 0;
     width: 475px;
     grid-column: 1;
     grid-row: 2;
+
+    // text-shadow: 0px 0px 1px #fff;
+
+    span {
+      -webkit-animation: blurFadeIn 3s ease-in 1s backwards;
+      -moz-animation: blurFadeIn 3s ease-in 1s backwards;
+      -ms-animation: blurFadeIn 3s ease-in 1s backwards;
+      animation: blurFadeIn 3s ease-in 1s backwards;
+      // color: transparent;
+      text-shadow: 0px 0px 1px #fff;
+
+      &:nth-child(2) {
+        -webkit-animation-delay: 2s;
+        -moz-animation-delay: 2s;
+        -ms-animation-delay: 2s;
+        animation-delay: 2s;
+      }
+
+      &:nth-child(3) {
+        -webkit-animation-delay: 3s;
+        -moz-animation-delay: 3s;
+        -ms-animation-delay: 3s;
+        animation-delay: 3s;
+      }
+
+      &:nth-child(4) {
+        -webkit-animation-delay: 4s;
+        -moz-animation-delay: 4s;
+        -ms-animation-delay: 4s;
+        animation-delay: 4s;
+      }
+
+      @keyframes blurFadeIn {
+        0% {
+          opacity: 0;
+          text-shadow: 0px 0px 40px #fff;
+          transform: scale(1.2);
+        }
+
+        50% {
+          opacity: 0.5;
+          text-shadow: 0px 0px 10px #fff;
+          transform: scale(1.1);
+        }
+
+        100% {
+          opacity: 1;
+          text-shadow: 0px 0px 1px #fff;
+          transform: scale(1);
+        }
+      }
+    }
+
 
     @media screen and (max-width: 1024px) {
       font-size: 90px;
@@ -177,12 +317,6 @@
     @media screen and (max-width: 768px) {
       width: 60px;
     }
-
-    // @media screen and (max-width: 768px) {
-    //   width: 350px;
-    // }
-
-
   }
 
   &__btn {
