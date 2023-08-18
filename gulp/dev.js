@@ -25,6 +25,8 @@ const { config } = require('../webpack.config.js');
 
 const babel = require('gulp-babel');
 
+const replace = require('gulp-replace');
+
 gulp.task('html:dev', function () {
   return gulp.src('./src/*.html')
     .pipe(htmlInclude({
@@ -52,6 +54,7 @@ gulp.task('images:dev', function () {
 gulp.task('fonts:dev', function () {
   return gulp
     .src('./src/fonts/**/*')
+    .pipe(replace('./', '../fonts/'))
     .pipe(gulp.dest('./build/fonts/'))
 })
 
@@ -59,7 +62,7 @@ gulp.task('js:dev', function () {
   return gulp
     .src('./src/js/*.js')
     .pipe(babel({
-      presets: ['@babel/env']
+      presets: ['@babel/env'],
     }))
     .pipe(webpack(config))
     .pipe(gulp.dest('./build/js/'))
@@ -90,9 +93,3 @@ gulp.task('watch:dev', function () {
   gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:dev'))
   gulp.watch('./src/js/**/*', gulp.parallel('js:dev'))
 })
-
-
-// gulp.task('ghPages', function () {
-//   return gulp.src('./build/**/*')
-//     .pipe(ghPages())
-// });

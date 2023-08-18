@@ -59,6 +59,7 @@ gulp.task('images:docs', function () {
 gulp.task('fonts:docs', function () {
   return gulp
     .src('./src/fonts/**/*')
+    .pipe(replace('./', '../fonts/'))
     .pipe(gulp.dest('./docs/fonts/'))
 })
 
@@ -90,16 +91,10 @@ gulp.task('clean:docs', function (done) {
   done()
 })
 
-// gulp.task('replaceUrl:docs', function () {
-//   return gulp.src('./src/*.html')
-
-// })
-
 gulp.task('watch:docs', function () {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('scss:docs'))
   gulp.watch('./src/**/*.html', gulp.parallel('html:docs'))
   gulp.watch('./src/images/**/*', gulp.parallel('images:docs'))
-  // gulp.watch('./src/**/*.html', gulp.parallel('replaceUrl:docs'))
   gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:docs'))
   gulp.watch('./src/js/**/*', gulp.parallel('js:docs'))
 });
