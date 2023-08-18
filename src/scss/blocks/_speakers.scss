@@ -18,12 +18,17 @@
 
   &__title {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 29px;
-    line-height: 34.6px;
+    font-size: 48px;
+    line-height: 52px;
     font-weight: 300;
     margin: 0;
     padding: 0 0 0 10px;
     color: #0A2756;
+
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+      line-height: 36px;
+    }
   }
 
   &__slides-wrapper {
