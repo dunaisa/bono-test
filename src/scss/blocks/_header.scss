@@ -6,7 +6,7 @@
   align-items: center;
   gap: 24px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     justify-content: space-between;
     position: relative;
   }
@@ -19,7 +19,7 @@
   &__burger-container {
     display: none;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
       display: flex;
       width: 25px;
       height: 22px;
@@ -50,7 +50,7 @@
 
   &__burger-span {
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
       position: absolute;
       padding: 0;
       margin: 0;
@@ -79,7 +79,7 @@
     width: 100%;
     border-left: 1px solid #C4C4C4;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
       &_type_active {
         display: flex;
       }
@@ -87,7 +87,7 @@
       display: none;
       position: absolute;
       flex-direction: column;
-      top: 76.59px;
+      top: 76px;
       left: 0;
       width: 100vw;
       background-color: #FFFFFF;
@@ -132,7 +132,7 @@
     margin: 0;
     padding: 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1000px) {
       flex-direction: column;
     }
   }

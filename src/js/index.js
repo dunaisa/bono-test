@@ -18,7 +18,7 @@ const swiper = new Swiper('.spekers-swiper', {
     el: ".speakers__pagination",
   },
   breakpoints: {
-    768: {
+    668: {
       slidesPerView: 2,
       spaceBetween: 40,
     },
