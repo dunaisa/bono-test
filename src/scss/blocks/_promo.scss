@@ -155,27 +155,19 @@
     grid-column: 1;
     grid-row: 1;
 
-    -webkit-animation: blurFadeIn 1s ease-in 5s backwards;
-    -moz-animation: blurFadeIn 1s ease-in 5s backwards;
-    -ms-animation: blurFadeIn 1s ease-in 5s backwards;
-    animation: blurFadeIn 1s ease-in 5s backwards;
+    -webkit-animation: dataTransform 1s ease-in 5s backwards;
+    -moz-animation: dataTransform 1s ease-in 5s backwards;
+    -ms-animation: dataTransform 1s ease-in 5s backwards;
+    animation: dataTransform 1s ease-in 5s backwards;
 
-    @keyframes blurFadeIn {
+    @keyframes dataTransform {
       0% {
         opacity: 0;
-        text-shadow: 0px 0px 40px #fff;
-        transform: scale(1.2);
-      }
-
-      50% {
-        opacity: 0.5;
-        text-shadow: 0px 0px 10px #fff;
         transform: scale(1.1);
       }
 
       100% {
         opacity: 1;
-        text-shadow: 0px 0px 1px #fff;
         transform: scale(1);
       }
     }
@@ -205,17 +197,14 @@
     grid-column: 1;
     grid-row: 2;
 
-    // text-shadow: 0px 0px 1px #fff;
-
     span {
-      -webkit-animation: blurFadeIn 3s ease-in 1s backwards;
-      -moz-animation: blurFadeIn 3s ease-in 1s backwards;
-      -ms-animation: blurFadeIn 3s ease-in 1s backwards;
-      animation: blurFadeIn 3s ease-in 1s backwards;
-      // color: transparent;
+      -webkit-animation: blurFadeIn 2s ease-in 1s backwards;
+      -moz-animation: blurFadeIn 2s ease-in 1s backwards;
+      -ms-animation: blurFadeIn 2s ease-in 1s backwards;
+      animation: blurFadeIn 2s ease-in 1s backwards;
       text-shadow: 0px 0px 1px #fff;
 
-      &:nth-child(2) {
+      &:nth-child(4) {
         -webkit-animation-delay: 2s;
         -moz-animation-delay: 2s;
         -ms-animation-delay: 2s;
@@ -229,7 +218,7 @@
         animation-delay: 3s;
       }
 
-      &:nth-child(4) {
+      &:nth-child(2) {
         -webkit-animation-delay: 4s;
         -moz-animation-delay: 4s;
         -ms-animation-delay: 4s;
